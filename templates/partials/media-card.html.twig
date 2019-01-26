@@ -1,0 +1,20 @@
+<div class="card">
+    {% if linktarget %}
+    <a href="{{linktarget}}">
+        {% endif %}
+        <figure class="cardimage">
+            <img alt="{{title}}" data-src="{{image}}" title="{{title}}" class="unveil">
+            <figcaption>{{title}}</figcaption>
+        </figure>
+        <div class="cardcontentwrapper">
+            <div class="cardcontent">
+            {% if headline %}
+                <h3 class="cardheadline">{{headline}}</h3>
+            {% endif %}
+            {{ shortcode.getContent()|raw }}
+            </div>
+        </div>
+    {% if linktarget %}
+        </a>
+    {% endif %}
+</div>

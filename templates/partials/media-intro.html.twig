@@ -1,0 +1,14 @@
+<header>
+    {% if headline %}
+        <h2>{{headline}}</h2>
+    {% endif %}
+
+    <div class="intro">
+        <p>{{ shortcode.getContent() }}</p>
+    </div>
+
+    {% if banner %}
+        <div class="banner unveil" data-src="{{ banner }}">
+        </div>
+    {% endif %}
+</header>
